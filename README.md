@@ -3,4 +3,4 @@ Wordplay is a tools that is used to manipulate your text according to your choic
    
    
    
-   site---> git remote add origin https://github.com/GURMAN1912/Wordplay.git
+   site---> https://gurman1912.github.io/Wordplay/
