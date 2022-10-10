@@ -3,9 +3,8 @@ import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import About from './components/About'
 import React from 'react';
-import { BrowserRouter ,Route,Routes } from "react-router-dom";
+// import { BrowserRouter ,Route,Routes } from "react-router-dom";
 
 function App() {
   const [Mode, setMode] = useState("light");
@@ -37,17 +36,9 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
       <Navbar title="WORDPLAY" mode={Mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
-      {/* <About mode={Mode} toggleMode={toggleMode}></About>
-      <Textform heading="Enter the text below" mode={Mode} showAlert={showAlert} /> */}
-        <Routes>
-          <Route exact path="/" element={<Textform heading="Enter the text below" mode={Mode} showAlert={showAlert} />}></Route>
-          <Route exact path="/about" element={<About mode={Mode} toggleMode={toggleMode}></About>}></Route>
-        </Routes>
-
-      </BrowserRouter> 
+      <Textform heading="Enter the text below" mode={Mode} showAlert={showAlert} /> 
     </>
   );
 }
